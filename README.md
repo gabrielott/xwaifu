@@ -4,6 +4,8 @@ xwaifu draws an image overlay above all other windows,
 making it visible at all times.
 It's pretty much just like [Xteddy](http://weber.itn.liu.se/~stegu/xteddy/xteddy_info.html),
 but with a few additional features.
+Useful to decorate your desktop or
+when you need to reference an image while working.
 
 ## Features
 * Set image location and size
@@ -23,6 +25,9 @@ but with a few additional features.
     -h          print this message
     -r          set image width automatically
     -R          set image height automatically
+
+For a detailed description of each option and a couple examples,
+please read the [manual](https://gabrielott.github.io/xwaifu/xwaifu.1.html).
 
 ## Dependencies
 * X11
