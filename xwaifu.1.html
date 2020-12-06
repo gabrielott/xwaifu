@@ -1,0 +1,182 @@
+<!-- Creator     : groff version 1.22.4 -->
+<!-- CreationDate: Sat Dec  5 23:24:20 2020 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>xwaifu</title>
+
+</head>
+<body>
+
+<h1 align="center">xwaifu</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#EXAMPLES">EXAMPLES</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHOR">AUTHOR</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">xwaifu &minus;
+draw image overlay</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>xwaifu</b>
+[<b>&minus;fhrR</b>] [<b>&minus;a</b> <i>ALPHA</i>]
+[<b>&minus;g</b> <i>GEOMETRY</i>] <i>image_file</i></p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">xwaifu draws an
+image overlay above all other windows, making it visible at
+all times. Useful to decorate your desktop or when you need
+to reference an image while working.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>&minus;a</b>
+<i>ALPHA</i></p>
+
+<p style="margin-left:22%;">Set image translucency to
+<i>ALPHA</i>. <i>ALPHA</i> must be a number between 0 and 1;
+0 meaning totally transparent and 1 meaning totally opaque.
+Default is totally opaque.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;f</b></p></td>
+<td width="8%"></td>
+<td width="46%">
+
+
+<p>Hide window when hovered over.</p></td>
+<td width="32%">
+</td></tr>
+</table>
+
+<p style="margin-left:11%;"><b>-g</b> <i>GEOMETRY</i></p>
+
+<p style="margin-left:22%;">Set window position and size.
+<i>GEOMETRY</i> must be a string as described in
+<b>XParseGeometry</b>(3). If <b>&minus;r</b> or
+<b>&minus;R</b> is set, the width or height specified will
+be ignored. Default is a window with the same dimensions as
+the image located at the top left of the screen.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;h</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Print message with basic usage information.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;r</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Set window width automatically. This option is only
+useful when used with <b>&minus;g</b>. The width will be set
+so that the original aspect ratio of the image is
+maintained.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;R</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Set window height automatically. This option is only
+useful when used with <b>&minus;g</b>. The height will be
+set so that the original aspect ratio of the image is
+maintained.</p> </td></tr>
+</table>
+
+<h2>EXAMPLES
+<a name="EXAMPLES"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>xwaifu
+some_image.png</b></p>
+
+<p style="margin-left:22%;">Draw an opaque overlay with the
+same dimensions as <i>some_image.png</i> at the top left of
+the screen.</p>
+
+<p style="margin-left:11%;"><b>xwaifu -g 0x1080+100+200 -a
+0.5 -rf some_image.jpg</b></p>
+
+<p style="margin-left:22%;">Draw a half-translucent overlay
+at (100,200) with a height of 1080 pixels and set the width
+automatically so that the image isn&rsquo;t distorted in any
+way. The overlay will disappear when the mouse is above
+it.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>XParseGeometry</b>(3)</p>
+
+<h2>AUTHOR
+<a name="AUTHOR"></a>
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Gabriel
+Ottoboni</p>
+<hr>
+</body>
+</html>
