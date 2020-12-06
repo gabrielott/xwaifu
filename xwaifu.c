@@ -26,7 +26,13 @@ die(char *message)
 void
 print_usage(void)
 {
-	printf("usage: xwaifu [-hrRf] [-g GEOMETRY] [-a ALPHA] image_file\n");
+	fprintf(stderr, "usage: xwaifu [-fhrR] [-a ALPHA] [-g GEOMETRY] image_file\n\n");
+	fprintf(stderr, "-a ALPHA    set image translucency\n");
+	fprintf(stderr, "-f          hide image when hovered over\n");
+	fprintf(stderr, "-g GEOMETRY set window position and/or size\n");
+	fprintf(stderr, "-h          print this message\n");
+	fprintf(stderr, "-r          set image width automatically\n");
+	fprintf(stderr, "-R          set image height automatically\n");
 }
 	
 void

@@ -1,0 +1,71 @@
+.TH xwaifu 1
+.SH NAME
+xwaifu \- draw image overlay
+.SH SYNOPSIS
+.B xwaifu
+.RB [ \-fhrR ]
+.RB [ \-a
+.IR ALPHA ]
+.RB [ \-g
+.IR GEOMETRY ]
+.I image_file
+.SH DESCRIPTION
+xwaifu draws an image overlay above all other windows,
+making it visible at all times.
+Useful to decorate your desktop or
+when you need to reference an image while working.
+.SH OPTIONS
+.TP
+.BI "\-a " ALPHA
+Set image translucency to
+.IR ALPHA . " ALPHA"
+must be a number between 0 and 1;
+0 meaning totally transparent and
+1 meaning totally opaque.
+Default is totally opaque.
+.TP
+.B \-f
+Hide window when hovered over.
+.TP
+.BI "-g " GEOMETRY
+Set window position and size.
+.I GEOMETRY
+must be a string as described in
+.BR XParseGeometry (3).
+.RB If " \-r " or " \-R"
+is set, the width or height specified will be ignored.
+Default is a window with the same dimensions as the image
+located at the top left of the screen.
+.TP
+.B \-h
+Print message with basic usage information.
+.TP
+.B \-r
+Set window width automatically.
+This option is only useful when used with
+.BR \-g .
+The width will be set so that
+the original aspect ratio of the image is maintained.
+.TP
+.B \-R
+Set window height automatically.
+This option is only useful when used with
+.BR \-g .
+The height will be set so that
+the original aspect ratio of the image is maintained.
+.SH EXAMPLES
+.TP
+.B xwaifu some_image.png
+Draw an opaque overlay with the same dimensions as
+.I some_image.png
+at the top left of the screen.
+.TP
+.B xwaifu -g 0x1080+100+200 -a 0.5 -rf some_image.jpg
+Draw a half-translucent overlay at (100,200)
+with a height of 1080 pixels
+and set the width automatically so that the image isn't distorted in any way.
+The overlay will disappear when the mouse is above it.
+.SH SEE ALSO
+.BR XParseGeometry (3)
+.SH AUTHOR
+Gabriel Ottoboni
