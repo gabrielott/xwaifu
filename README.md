@@ -32,3 +32,16 @@ please read the [manual](https://gabrielott.github.io/xwaifu/xwaifu.1.html).
 ## Dependencies
 * X11
 * Imlib2
+
+## Installation
+1. Make sure you have X11 and Imlib2 installed.
+2. Clone the repository with `git clone https://github.com/gabrielott/xwaifu`
+3. Compile and install with `make install`.
+
+Installing requires root privileges,
+so you may have to use `sudo`.
+The executable will be located at /usr/local/bin/xwaifu;
+if you wish to do so,
+this can be changed by setting the PREFIX variable to something else when calling `make`.
+
+xwaifu can be uninstalled with `make uninstall`.
