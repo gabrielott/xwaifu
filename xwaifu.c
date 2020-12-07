@@ -13,7 +13,8 @@
 Display *dpy;
 int scr;
 Window win;
-int x, y, w, h;
+int x, y;
+unsigned w, h;
 int img_w, img_h;
 
 void
