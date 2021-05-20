@@ -158,7 +158,8 @@ set_background(double alpha)
 	XClearWindow(dpy, win);
 
 	XFreePixmap(dpy, background);
-	XFreePixmap(dpy, mask);
+	if (mask)
+		XFreePixmap(dpy, mask);
 }
 
 void
