@@ -6,7 +6,7 @@ LDLIBS = -lX11 -lXext -lImlib2
 OBJS = xwaifu.o
 
 xwaifu: $(OBJS)
-	$(CC) -o xwaifu $(LDLIBS) $(OBJS)
+	$(CC) -o xwaifu $(OBJS) $(LDLIBS)
 
 xwaifu.o:
 
